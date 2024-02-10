@@ -9,4 +9,10 @@ class TestTestView(TestCase):
     def test_test_view(self):
         response = self.client.get("/api/openapi/test")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data, "hello ok")
+
+    def test_generate_ad_prompt_view(self):
+        response = self.client.post("/api/openapi/", {
+            "product_description": "Some random product",
+            "vibe_words": "cool, simple,elegant"
+        })
+        self.assertEqual(response.status_code, 200)
