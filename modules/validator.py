@@ -1,5 +1,7 @@
 from rest_framework import serializers
 
+# custom class for validation
+
 
 class Validator(serializers.Serializer):
 
