@@ -12,7 +12,8 @@ from openapiapp.utils import generate_prompt
 
 @api_view(["GET"])
 def test(request: Request):
-    return Response("hello ok")
+    # return Response("hello ok")
+    raise ValueError("sadsadasd")
 
 
 @api_view(['POST'])
